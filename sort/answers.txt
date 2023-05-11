@@ -1,0 +1,17 @@
+sort1 uses: Bubble sort
+random 0.311
+reversed 0.253
+sorted 0.051
+How do you know?:  It runs fastest when the numbers are already sorted and slowest when they're not sorted due to it's time complexity of O(n²) and Ω(n).
+
+sort2 uses: Merge sort
+random 0.071
+reversed 0.054
+sorted 0.058
+How do you know?: The runtime is pretty constant in all situations and has the fastest running time on the largest datasets due it's O(n log n) and Ω(n log n).
+
+sort3 uses: Selection sort
+random 0.188
+reversed 0.159
+sorted 0.181
+How do you know?: The runtime is also pretty constant but it performs worse than sort2 on large datasets and does not perform better when the data is already sorted. Which leads me to think this can be O(n²) and Ω(n²).
