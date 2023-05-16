@@ -1,0 +1,6 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+This individual seems to have a preference for high energy and highly danceable songs. These songs can either be cheerfull or sad.
+
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+If the user both likes very euphoric and and very angry songs, this would be represented as a preference for neutral valence music.
+Extreme values could also impact energy and danceability, maybe using a median value would be a better representation of a persons true preferences.
