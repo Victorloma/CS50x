@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3 class="question">What month was Julius Caesar stabbed in?</h3>
+                <p class="incorrect1">Incorrect</p>
+                <p class="correct1">Correct!</p>
+                <ul>
+                    <li><button class="wrong1">January</button></li>
+                    <li><button class="correctAnswer1">March</button></li>
+                    <li><button class="wrong1">August</button></li>
+                    <li><button class="wrong1">September</button></li>
+                    <li><button class="wrong1">November</button></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3 class="question">What's the first name of his majesty the king of England?</h3>
+                <p class="incorrect2">Incorrect</p>
+                <p class="correct2">Correct!</p>
+                <div class="guess">
+                    <input placeholder="What's your best guess?" type="text">
+                    <button class="btn">Check Answer</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            // TODO: Add code to check answers to questions
+            // Select buttons of first question
+            let wrongAnswers = document.querySelectorAll(".wrong1");
+            let correctAnswer1 = document.querySelector(".correctAnswer1");
+
+            // Add eventlisteners to these buttons and define functions for displaying correct or incorrect
+            wrongAnswers.forEach(
+                (wrongAnswer, i) => (
+                    wrongAnswer.addEventListener("click", function() {
+                        wrongAnswer.style.backgroundColor = "red";
+                        correct1.style.display = "none";
+                        incorrect1.style.display = "block";
+                    })
+                )
+            );
+
+            correctAnswer1.addEventListener("click", function() {
+                correctAnswer1.style.backgroundColor = "green";
+                incorrect1.style.display = "none";
+                correct1.style.display = "block";
+            });
+
+            // Define variables for feedback
+            let correct1 = document.querySelector(".correct1");
+            let incorrect1 = document.querySelector(".incorrect1");
+
+            // Define variables for free question
+            let input = document.querySelector("input");
+            let btn = document.querySelector(".btn");
+            let inputText = "";
+
+            // Add eventlistener that saves input text in variable
+            input.addEventListener("input", function(e){
+                inputText = e.target.value;
+            })
+
+            // Check input text when button is clicked and give feedback
+            btn.addEventListener("click", function() {
+                if(inputText === "Charles"){
+                    displayCorrect2();
+                } else {
+                    displayIncorrect2();
+                }
+            })
+
+            // Define variables for functions that check answers
+            let correct2 = document.querySelector(".correct2");
+            let incorrect2 = document.querySelector(".incorrect2");
+
+            // Define functions for displaying feedback and changing background color
+            function displayIncorrect2() {
+                input.style.backgroundColor = "red";
+                correct2.style.display = "none";
+                incorrect2.style.display = "block";
+            }
+
+            function displayCorrect2() {
+                input.style.backgroundColor = "green";
+                incorrect2.style.display = "none";
+                correct2.style.display = "block";
+            }
+        </script>
+    </body>
+</html>
