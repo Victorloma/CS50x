@@ -1,0 +1,51 @@
+img {
+    object-fit: cover;
+    height: 500px;
+}
+
+.card-group {
+    padding-top: 3rem;
+}
+
+.col-lg-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.col-lg-4 p, .col-lg-4 h2 {
+    text-align: center;
+}
+
+.col-lg-4 > img {
+    height: 140px;
+    width: 140px;
+}
+
+.navbar-brand {
+    margin-left: 4rem;
+}
+
+#main {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+#crossfit, #stocks, #surf {
+    margin-top: 5rem;
+    display: none;
+}
+
+#crossfit img, #stocks img, #surf img {
+    height: 140px;
+    width: 140px;
+}
+.randomBtn {
+    margin: 5rem 0rem 5rem 0rem;
+}
+
+.container.d-flex.justify-content-center.randomDiv {
+    min-height: 280px;
+}
